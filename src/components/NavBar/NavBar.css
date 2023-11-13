@@ -1,0 +1,41 @@
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #a4b89a;
+  padding: 10px;
+}
+
+.logo img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.nav-links button {
+  background: none;
+  border: none;
+  color: white;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.nav-links button:hover {
+  color: #ffcc00;
+}
+
+.item-list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px; 
+  color: rgb(12, 12, 12);
+}
