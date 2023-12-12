@@ -1,12 +1,11 @@
 
 
 .carrito {
-    display: flex;
-    align-items: center;
-  }
-  
-  .carrito img {
-    width: 30px; 
-    height: auto;
-  }
-  
+  display: flex;
+  align-items: center;
+}
+
+.carrito img {
+  width: 30px; 
+  height: auto;
+}

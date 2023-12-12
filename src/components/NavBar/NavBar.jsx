@@ -1,9 +1,7 @@
-
 import React from 'react';
 import logo from './assets/logo.png';
+import CartWidget from '../CartWidget/CartWidget';  // Ajusta la ruta de importación según la estructura de tu proyecto
 import './NavBar.css';
-import ItemListContainer from '../ItemListContainer/ItemListContainer';
-import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
@@ -21,12 +19,8 @@ const NavBar = () => {
         </div>
         <CartWidget />
       </nav>
-      <div className="item-list-container">
-        <ItemListContainer greeting={'Gracias por tu compra'} />
-      </div>
     </div>
   );
 };
 
 export default NavBar;
-
