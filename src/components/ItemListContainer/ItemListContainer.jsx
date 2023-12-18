@@ -1,19 +1,27 @@
 import React, { useState, useEffect } from 'react';
-import { getProducts } from '../../asycMock';
+import { getProducts, getProductsByCategory } from '../../asycMock';
 import ItemList from '../ItemList/ItemList';
+
+import {useParams} from 'react-router-dom'
 
 const ItemListContainer = ({ greeting }) => {
   const [products, setProducts] = useState([]);
 
+  const {categoryId} = useParams ()
+
   useEffect(() => {
-    getProducts()
+
+const asycFunc = categoryId ? getProductsByCategory : getProducts
+
+asycFunc (categoryId)
+
       .then(response => {
         setProducts(response);
       })
       .catch(error => {
         console.error(error);
       });
-  }, []); // Corregí la posición de los corchetes
+  }, [categoryId]); // Corregí la posición de los corchetes
 
   return (
     <div>

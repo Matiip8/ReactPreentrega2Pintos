@@ -1,9 +1,10 @@
 import React from 'react';
 import './Item.css';
+import ItemCount from '../ItemCount/ItemCount';
 
 const Item = ({ id, name, img, price, stock }) => {
   return (
-    <article className="Carditem">
+    <article className="CardItem">
       <header className="Header">
         <h2 className="ItemHeader">{name}</h2>
       </header>
@@ -18,7 +19,7 @@ const Item = ({ id, name, img, price, stock }) => {
       </section>
 
       <footer className="ItemFooter">
-        <button className="Option">Ver detalle</button> {/* Corregí "classname" a "className" */}
+       <link to={`/item/${id}`} className = 'Option'>verdetail</link> 
       </footer>
     </article>
   );

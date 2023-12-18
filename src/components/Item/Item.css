@@ -1,0 +1,32 @@
+ 
+  .CardItem {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    border-radius: 10px; /* Ajusta este valor según tus preferencias */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+  }
+
+  .CardItem picture img {
+    width: 100px; /* Puedes ajustar el ancho según tus necesidades */
+    height: auto; /* Esto asegura que la altura se ajuste proporcionalmente al ancho */
+  }
+  
+  /* Estilo específico para el texto del encabezado */
+  .ItemHeader {
+    color: black;
+  }
+  
+  /* Estilo específico para el texto de la información */
+  .Info {
+    color: black;
+  }
+  
+  /* Estilo específico para el botón */
+  .Option {
+    background-color: black;
+    color: white;
+    /* Otros estilos para el botón según tus preferencias */
+  }
+  

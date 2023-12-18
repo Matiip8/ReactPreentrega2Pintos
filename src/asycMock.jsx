@@ -1,25 +1,25 @@
 const products = [ 
     {
         id:'1',
-        name:'Iphon 10',
+        name:'iphon 10',
         price:900,
-        img:'https://www.bing.com/ck/a?!&&p=f90e12a962f68b11JmltdHM9MTcwMjI1MjgwMCZpZ3VpZD0yYTNhOTlmYS1iNWExLTZiODktMGJhYy04YWVhYjQ3YzZhNzMmaW5zaWQ9NTYxMw&ptn=3&ver=2&hsh=3&fclid=2a3a99fa-b5a1-6b89-0bac-8aeab47c6a73&u=a1L2ltYWdlcy9zZWFyY2g_cT1pbWFnZW4gZGUgaXBob25lIDEwJkZPUk09SVFGUkJBJmlkPTExODNCNkQ5NzIxNTQyMUMzMkIwNzQ5RDNGOEQ1RDcyMTdCNDdENzQ&ntb=1' ,
+        img:'https://th.bing.com/th/id/R.2009c76167eb2bb05575e49badcd3f1a?rik=dH20F3JdjT%2bddA&pid=ImgRaw&r=0' ,
         stock:25,
         description: 'Descripcioooooooon'
     },
     {
         id:'2',
-        name:'Iphon 12',
+        name:'iphon 12',
         price:1200,
-        img:'https://www.bing.com/ck/a?!&&p=f90e12a962f68b11JmltdHM9MTcwMjI1MjgwMCZpZ3VpZD0yYTNhOTlmYS1iNWExLTZiODktMGJhYy04YWVhYjQ3YzZhNzMmaW5zaWQ9NTYxMw&ptn=3&ver=2&hsh=3&fclid=2a3a99fa-b5a1-6b89-0bac-8aeab47c6a73&u=a1L2ltYWdlcy9zZWFyY2g_cT1pbWFnZW4gZGUgaXBob25lIDEwJkZPUk09SVFGUkJBJmlkPTExODNCNkQ5NzIxNTQyMUMzMkIwNzQ5RDNGOEQ1RDcyMTdCNDdENzQ&ntb=1' ,
+        img:'https://th.bing.com/th/id/OIP.9fs49eJdO4njXh8O3r9jGwHaHa?w=590&h=590&rs=1&pid=ImgDetMain' ,
         stock:15,
         description: 'Descripcioooooooon'
     },
     {
         id:'3',
-        name:'Iphon 8',
+        name:'iphon 8',
         price:700,
-        img:'https://www.bing.com/ck/a?!&&p=f90e12a962f68b11JmltdHM9MTcwMjI1MjgwMCZpZ3VpZD0yYTNhOTlmYS1iNWExLTZiODktMGJhYy04YWVhYjQ3YzZhNzMmaW5zaWQ9NTYxMw&ptn=3&ver=2&hsh=3&fclid=2a3a99fa-b5a1-6b89-0bac-8aeab47c6a73&u=a1L2ltYWdlcy9zZWFyY2g_cT1pbWFnZW4gZGUgaXBob25lIDEwJkZPUk09SVFGUkJBJmlkPTExODNCNkQ5NzIxNTQyMUMzMkIwNzQ5RDNGOEQ1RDcyMTdCNDdENzQ&ntb=1' ,
+        img:'https://th.bing.com/th/id/OIP.s-pmknPjJUqCEftFC9cXQwHaHa?w=500&h=500&rs=1&pid=ImgDetMain' ,
         stock:20,
         description: 'Descripcioooooooon'
     },
@@ -32,3 +32,12 @@ export const getProducts = ( ) => {
         }, 500 )
     })
      }
+
+         export const getProductById = (productId) => {
+            return new Promise((resolve) => {
+              setTimeout(() => {
+                resolve(products.find(prod => prod.id === productId));
+              }, 500);
+            });
+          };
+          

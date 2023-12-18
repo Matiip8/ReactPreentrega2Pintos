@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './assets/logo.png';
-import CartWidget from '../CartWidget/CartWidget';  // Ajusta la ruta de importación según la estructura de tu proyecto
+import { NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
 import './NavBar.css';
 
 const NavBar = () => {
@@ -12,10 +13,9 @@ const NavBar = () => {
         </div>
 
         <div className="nav-links">
-          <button>Inicio</button>
-          <button>Servicios</button>
-          <button>Multimedia</button>
-          <button>Contactos</button>
+          <NavLink
+            to="/category/celular"
+            className={({ isActive }) => (isActive ? 'ActiveOption' : 'Option')}>celular</NavLink>
         </div>
         <CartWidget />
       </nav>
@@ -24,3 +24,4 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
